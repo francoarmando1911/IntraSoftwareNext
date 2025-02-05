@@ -8,10 +8,10 @@ export default function Home() {
       <picture>
         <source
           media="(min-width: 700px)"
-          srcSet="/slirderDesktopIntra.png"
+          srcSet="sliderDesktop.png"
         />
         <Image
-          src="/sliderMobileIntra.png"
+          src="/sliderPhone.png"
           alt="Slider"
           layout="fill"
           objectFit="cover"
