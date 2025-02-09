@@ -1,5 +1,5 @@
-import FirstPage from "@/components/FirstPageComponent";
 import FooterComponent from "@/components/FooterComponent";
+import ServicesComponent from "@/components/ServicesComponent";
 import Link from "next/link";
 
 export default function Home() {
@@ -7,7 +7,7 @@ export default function Home() {
     <>
       <div className="relative overflow-hidden flex items-center justify-center min-h-screen bg-gradient-to-r from-red-700 to-red-900 text-white text-center px-6">
         <div className="max-w-2xl">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+          <h1 className="text-5xl sm:text-4xl md:text-5xl font-bold mb-4">
             Listo para revolucionar tu negocio?
           </h1>
           <h2 className="text-lg sm:text-xl md:text-2xl font-light mb-6">
@@ -18,7 +18,7 @@ export default function Home() {
           </Link>
         </div>
       </div>
-      <FirstPage/>
+      <ServicesComponent/>
       <FooterComponent/>
     </>
   );
