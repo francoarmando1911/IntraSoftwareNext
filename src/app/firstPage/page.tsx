@@ -1,4 +1,4 @@
-import FirstPage from '@/components/FirstPage'
+import FirstPage from '@/components/FirstPageComponent'
 import React from 'react'
 
 export default function page() {

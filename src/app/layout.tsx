@@ -6,8 +6,8 @@ export const metadata: Metadata = {
   title: "Intra Software Next",
   description: "Intra Software",
   icons: {
-    icon: '/logoMobileIntra.png',
-    apple: '/logoMobileIntra.png',
+    icon: '/logoIntra.png',
+    apple: '/logoIntra.png',
   },
 };
 
