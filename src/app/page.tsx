@@ -7,8 +7,8 @@ export default function Home() {
   return (
     <>
       <HeaderComponent />
-      <main className="flex flex-col items-center justify-center min-h-screen px-6 md:px-12 text-white text-center bg-gradient-to-r from-red-700 to-red-900">
-        <div className="max-w-screen-lg w-full">
+      <main className="flex flex-col items-center justify-center min-h-screen px-6 md:px-12 text-white text-center bg-[url('/slider2.png')] bg-cover bg-center bg-no-repeat bg-fixed">
+        <div className="max-w-screen-lg w-full bg-black/70 p-6 rounded-xl">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             ¿Listo para revolucionar tu negocio?
           </h1>

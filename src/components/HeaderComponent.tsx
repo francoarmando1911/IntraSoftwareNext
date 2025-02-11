@@ -9,27 +9,20 @@ export default function HeaderComponent() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <header className="w-full bg-[#000B54] text-white flex items-center justify-between px-6  shadow-md">
+        <header className="relative w-full bg-[#000B54] text-white flex items-center justify-between px-6 py-4 shadow-md">
             <Link href="/">
                 <Image src="/logoIntra1.png" alt="Logo" width={120} height={40} priority />
             </Link>
 
-            {/* Título (oculto en móviles para más espacio) 
-            <h1 className="hidden md:block text-lg sm:text-xl md:text-2xl font-semibold">
-                Intra Software
-            </h1>
-            */}
-
-            {/* Botón de menú hamburguesa (solo en móviles) */}
             <button
-                className="md:hidden text-2xl focus:outline-none"
+                className="md:hidden text-2xl focus:outline-none p-7"
                 onClick={() => setIsOpen(!isOpen)}
             >
                 {isOpen ? <FaTimes /> : <FaBars />}
             </button>
 
             <nav
-                className={`absolute top-16 left-0 w-full bg-[#000B54] md:static md:w-auto md:flex md:space-x-4 transition-all duration-300 ${isOpen ? "block" : "hidden"
+                className={`absolute top-full left-0 w-full bg-[#000B54] md:static md:w-auto md:flex md:space-x-4 transition-all duration-300 ${isOpen ? "block" : "hidden"
                     }`}
             >
                 <ul className="flex flex-col md:flex-row items-center w-full md:w-auto">
