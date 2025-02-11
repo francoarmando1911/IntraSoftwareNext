@@ -23,3 +23,17 @@ export const services = [
         description: "Con formularios intuitivos, llamadas a la acción claras y un diseño que destaca, tus campañas de marketing digital lograrán su máximo rendimiento."
     }
 ]
+
+/* 
+Cuando renderice estos servicios en el componente, ahi tengo que agregar los estilos para los iconos, Ejemplo:
+
+{services.map((service, index) => (
+    <div key={index}>
+        <service.icon className="text-4xl mb-4 text-blue-500" />
+        <h3>{service.title}</h3>
+        <p>{service.description}</p>
+    </div>
+))}
+
+
+*/

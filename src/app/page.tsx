@@ -1,25 +1,30 @@
 import FooterComponent from "@/components/FooterComponent";
+import HeaderComponent from "@/components/HeaderComponent";
 import ServicesComponent from "@/components/ServicesComponent";
 import Link from "next/link";
 
 export default function Home() {
   return (
     <>
-      <div className="relative overflow-hidden flex items-center justify-center min-h-screen bg-gradient-to-r from-red-700 to-red-900 text-white text-center px-6">
-        <div className="max-w-2xl">
-          <h1 className="text-5xl sm:text-4xl md:text-5xl font-bold mb-4">
-            Listo para revolucionar tu negocio?
+      <HeaderComponent />
+      <main className="flex flex-col items-center justify-center min-h-screen px-6 md:px-12 text-white text-center bg-gradient-to-r from-red-700 to-red-900">
+        <div className="max-w-screen-lg w-full">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+            ¿Listo para revolucionar tu negocio?
           </h1>
-          <h2 className="text-lg sm:text-xl md:text-2xl font-light mb-6">
+          <h2 className="text-lg md:text-2xl font-light mb-6">
             A través de la innovación y el desarrollo de software, ayudamos a las empresas a alcanzar sus objetivos con mayor eficiencia.
           </h2>
-          <Link href="/contactPage" className="bg-white text-red-700 font-semibold px-6 py-3 rounded-xl shadow-md hover:bg-red-300 transition duration-300">
-            Contacta con nosotros!
+          <Link
+            href="/contactPage"
+            className="bg-white text-red-700 font-semibold px-6 py-3 rounded-xl shadow-md hover:bg-red-300 transition duration-300"
+          >
+            ¡Contacta con nosotros!
           </Link>
         </div>
-      </div>
-      <ServicesComponent/>
-      <FooterComponent/>
+      </main>
+      <ServicesComponent />
+      <FooterComponent />
     </>
   );
 }
