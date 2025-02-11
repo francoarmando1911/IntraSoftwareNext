@@ -7,7 +7,8 @@ export default function Home() {
   return (
     <>
       <HeaderComponent />
-      <main className="flex flex-col items-center justify-center min-h-screen px-6 md:px-12 text-white text-center bg-[url('/slider2.png')] bg-cover bg-center bg-no-repeat bg-fixed">
+      <div className="fixed inset-0 bg-[url('/slider2.png')] bg-cover bg-center bg-no-repeat -z-10"></div>
+      <main className="relative flex flex-col items-center justify-center min-h-screen px-6 md:px-12 text-white text-center">
         <div className="max-w-screen-lg w-full bg-black/70 p-6 rounded-xl">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             ¿Listo para revolucionar tu negocio?
@@ -28,3 +29,4 @@ export default function Home() {
     </>
   );
 }
+
