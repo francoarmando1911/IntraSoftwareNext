@@ -10,6 +10,8 @@ export default function ServicesComponent() {
                 <p className="text-lg text-gray-200 mt-4">
                     Ofrecemos soluciones innovadoras en desarrollo de software para ayudar a las empresas a alcanzar sus objetivos con eficiencia.
                 </p>
+
+                
             </div>
         </div>
     );
