@@ -1,43 +1,53 @@
-import React from 'react'
-import { FaEnvelope } from 'react-icons/fa';
-import { FaLinkedin } from 'react-icons/fa';
-import { FaWhatsapp } from 'react-icons/fa';
+import React from 'react';
+import { FaEnvelope, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 
 export default function ContactPage() {
     return (
-        <>
-            <section id="contact" className="py-20 bg-gray-900">
-                <div className="container mx-auto px-6">
-                    <h2 className="text-4xl font-bold text-center mb-16">Contacto</h2>
-                    <div className="flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0 md:space-x-8">
-                        <a
-                            href="mailto:francoarmando2002@gmail.com"
-                            className="flex items-center space-x-3 bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-lg transform hover:scale-105 transition-all duration-300"
-                        >
-                            <FaEnvelope className="text-2xl" />
-                            <span>Email</span>
-                        </a>
-                        <a
-                            href="https://www.linkedin.com/in/franco-armando/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center space-x-3 bg-blue-800 hover:bg-blue-900 px-8 py-4 rounded-lg transform hover:scale-105 transition-all duration-300"
-                        >
-                            <FaLinkedin className="text-2xl" />
-                            <span>LinkedIn</span>
-                        </a>
-                        <a
-                            href="https://wa.me/3442310036"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center space-x-3 bg-green-600 hover:bg-green-700 px-8 py-4 rounded-lg transform hover:scale-105 transition-all duration-300"
-                        >
-                            <FaWhatsapp className="text-2xl" />
-                            <span>WhatsApp</span>
-                        </a>
-                    </div>
+        <section id="contact" className="min-h-screen flex items-center justify-center bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white px-6">
+            <div className="flex flex-col items-center text-center w-full max-w-4xl p-10 rounded-2xl bg-white/10 backdrop-blur-md shadow-lg">
+                <h2 className="text-5xl font-bold mb-6">Contacto</h2>
+                <p className="text-lg text-gray-300 mb-8">
+                    Puedes comunicarte con nosotros a través de cualquiera de estos medios:
+                </p>
+
+                <div className="flex flex-col sm:flex-row justify-center items-center w-full gap-6">
+                    <ContactButton
+                        href="mailto:francoarmando2002@gmail.com"
+                        icon={<FaEnvelope />}
+                        text="Email"
+                        bgColor="bg-blue-600"
+                        hoverColor="hover:bg-blue-700"
+                    />
+                    <ContactButton
+                        href="https://www.linkedin.com/in/franco-armando/"
+                        icon={<FaLinkedin />}
+                        text="LinkedIn"
+                        bgColor="bg-blue-800"
+                        hoverColor="hover:bg-blue-900"
+                    />
+                    <ContactButton
+                        href="https://wa.me/3442310036"
+                        icon={<FaWhatsapp />}
+                        text="WhatsApp"
+                        bgColor="bg-green-600"
+                        hoverColor="hover:bg-green-700"
+                    />
                 </div>
-            </section>
-        </>
-    )
+            </div>
+        </section>
+    );
+}
+
+function ContactButton({ href, icon, text, bgColor, hoverColor }: { href: string; icon: React.ReactNode; text: string; bgColor: string; hoverColor: string }) {
+    return (
+        <a
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`flex items-center justify-center space-x-3 ${bgColor} ${hoverColor} px-6 py-4 w-64 rounded-lg transform hover:scale-105 transition-all duration-300 shadow-md`}
+        >
+            <span className="text-2xl">{icon}</span>
+            <span className="text-lg font-medium">{text}</span>
+        </a>
+    );
 }
